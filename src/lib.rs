@@ -37,7 +37,8 @@ impl GrowthLedger {
         if self.contributions.contains_key(&contribution.id) {
             return Err(GrowthError::DuplicateContribution);
         }
-        self.contributions.insert(contribution.id.clone(), contribution);
+        self.contributions
+            .insert(contribution.id.clone(), contribution);
         Ok(())
     }
 
